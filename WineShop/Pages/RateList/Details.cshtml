@@ -1,0 +1,25 @@
+﻿@page
+@model WineShop.Pages.RateList.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RateList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RateList.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RateList.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.RateList.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
