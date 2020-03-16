@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Customer
 {
-    public class DetailsModel : PageModel
+    public class DetailsModel : PageModel//this is for detail pf the customer
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -30,7 +30,7 @@ namespace WineShop.Pages.Customer
 
             Customer = await _context.Customer
                 .Include(c => c.RateList)
-                .Include(c => c.Wine).SingleOrDefaultAsync(m => m.ID == id);
+                .Include(c => c.Wine).SingleOrDefaultAsync(m => m.ID == id);//customer detail by id
 
             if (Customer == null)
             {

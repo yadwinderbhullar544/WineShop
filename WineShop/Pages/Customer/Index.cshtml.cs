@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Customer
 {
-    public class IndexModel : PageModel
+    public class IndexModel : PageModel//index class for showing all customers list
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -25,7 +25,7 @@ namespace WineShop.Pages.Customer
         {
             Customer = await _context.Customer
                 .Include(c => c.RateList)
-                .Include(c => c.Wine).ToListAsync();
+                .Include(c => c.Wine).ToListAsync();//list of all customer
         }
     }
 }

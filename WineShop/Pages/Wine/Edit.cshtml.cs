@@ -11,7 +11,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Wine
 {
-    public class EditModel : PageModel
+    public class EditModel : PageModel//updating the wine class
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -46,7 +46,7 @@ namespace WineShop.Pages.Wine
                 return Page();
             }
 
-            _context.Attach(Wine).State = EntityState.Modified;
+            _context.Attach(Wine).State = EntityState.Modified;//update wine
 
             try
             {

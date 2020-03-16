@@ -11,7 +11,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Customer
 {
-    public class EditModel : PageModel
+    public class EditModel : PageModel//this is for editing the customer
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -38,8 +38,8 @@ namespace WineShop.Pages.Customer
             {
                 return NotFound();
             }
-           ViewData["RateListID"] = new SelectList(_context.RateList, "ID", "Price");
-           ViewData["WineID"] = new SelectList(_context.Wines, "ID", "Name");
+           ViewData["RateListID"] = new SelectList(_context.RateList, "ID", "Price");//rate dropdown
+           ViewData["WineID"] = new SelectList(_context.Wines, "ID", "Name");//wine dropdown
             return Page();
         }
 
@@ -50,7 +50,7 @@ namespace WineShop.Pages.Customer
                 return Page();
             }
 
-            _context.Attach(Customer).State = EntityState.Modified;
+            _context.Attach(Customer).State = EntityState.Modified;//updating customer
 
             try
             {

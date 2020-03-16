@@ -23,7 +23,7 @@ namespace WineShop.Pages.Wine
 
         public async Task OnGetAsync()
         {
-            Wine = await _context.Wines.ToListAsync();
+            Wine = await _context.Wines.ToListAsync();//list of wines
         }
     }
 }

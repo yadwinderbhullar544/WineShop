@@ -49,7 +49,7 @@ namespace WineShop.Pages.Wine
 
             if (Wine != null)
             {
-                _context.Wines.Remove(Wine);
+                _context.Wines.Remove(Wine);//delete wine
                 await _context.SaveChangesAsync();
             }
 

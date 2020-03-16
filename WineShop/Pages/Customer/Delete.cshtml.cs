@@ -51,7 +51,7 @@ namespace WineShop.Pages.Customer
 
             if (Customer != null)
             {
-                _context.Customer.Remove(Customer);
+                _context.Customer.Remove(Customer);//delete customer
                 await _context.SaveChangesAsync();
             }
 

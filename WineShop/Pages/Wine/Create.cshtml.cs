@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Wine
 {
-    public class CreateModel : PageModel
+    public class CreateModel : PageModel//create class
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -34,7 +34,7 @@ namespace WineShop.Pages.Wine
                 return Page();
             }
 
-            _context.Wines.Add(Wine);
+            _context.Wines.Add(Wine);//add wine
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

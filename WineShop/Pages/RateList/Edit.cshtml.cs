@@ -11,7 +11,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.RateList
 {
-    public class EditModel : PageModel
+    public class EditModel : PageModel//edit class
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -30,7 +30,7 @@ namespace WineShop.Pages.RateList
                 return NotFound();
             }
 
-            RateList = await _context.RateList.SingleOrDefaultAsync(m => m.ID == id);
+            RateList = await _context.RateList.SingleOrDefaultAsync(m => m.ID == id);//edit ratelist
 
             if (RateList == null)
             {

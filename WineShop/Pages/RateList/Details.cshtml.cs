@@ -28,7 +28,7 @@ namespace WineShop.Pages.RateList
                 return NotFound();
             }
 
-            RateList = await _context.RateList.SingleOrDefaultAsync(m => m.ID == id);
+            RateList = await _context.RateList.SingleOrDefaultAsync(m => m.ID == id);//detail by id
 
             if (RateList == null)
             {

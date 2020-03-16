@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.RateList
 {
-    public class DeleteModel : PageModel
+    public class DeleteModel : PageModel//deleting the ratelist
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -49,7 +49,7 @@ namespace WineShop.Pages.RateList
 
             if (RateList != null)
             {
-                _context.RateList.Remove(RateList);
+                _context.RateList.Remove(RateList);//delete ratelist
                 await _context.SaveChangesAsync();
             }
 

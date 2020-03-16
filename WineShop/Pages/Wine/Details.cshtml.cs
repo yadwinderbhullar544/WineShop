@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Wine
 {
-    public class DetailsModel : PageModel
+    public class DetailsModel : PageModel//detail wine
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -28,7 +28,7 @@ namespace WineShop.Pages.Wine
                 return NotFound();
             }
 
-            Wine = await _context.Wines.SingleOrDefaultAsync(m => m.ID == id);
+            Wine = await _context.Wines.SingleOrDefaultAsync(m => m.ID == id);//detail by id
 
             if (Wine == null)
             {

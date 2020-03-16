@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.RateList
 {
-    public class CreateModel : PageModel
+    public class CreateModel : PageModel//class for adding the ratelist
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -34,7 +34,7 @@ namespace WineShop.Pages.RateList
                 return Page();
             }
 
-            _context.RateList.Add(RateList);
+            _context.RateList.Add(RateList);//adding the ratelist
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

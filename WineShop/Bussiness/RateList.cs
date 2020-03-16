@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WineShop.Bussiness
 {
-    public class RateList
+    public class RateList//ratelist class
     {
         public int ID { get; set; }
         public Nullable<decimal> Price { get; set; }

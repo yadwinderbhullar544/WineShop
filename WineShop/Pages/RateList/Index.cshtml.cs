@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.RateList
 {
-    public class IndexModel : PageModel
+    public class IndexModel : PageModel//index class
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -23,7 +23,7 @@ namespace WineShop.Pages.RateList
 
         public async Task OnGetAsync()
         {
-            RateList = await _context.RateList.ToListAsync();
+            RateList = await _context.RateList.ToListAsync();//list of ratelist
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WineShop.Bussiness
 {
-    public class Customer
+    public class Customer//this is customer class in models for database
     {
         public int ID { get; set; }
         public string Name { get; set; }

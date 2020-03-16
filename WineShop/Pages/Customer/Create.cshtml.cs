@@ -10,7 +10,7 @@ using WineShop.Data;
 
 namespace WineShop.Pages.Customer
 {
-    public class CreateModel : PageModel
+    public class CreateModel : PageModel//Create class for functionality of crating customer
     {
         private readonly WineShop.Data.ApplicationDbContext _context;
 
@@ -21,8 +21,8 @@ namespace WineShop.Pages.Customer
 
         public IActionResult OnGet()
         {
-        ViewData["RateListID"] = new SelectList(_context.RateList, "ID", "Price");
-        ViewData["WineID"] = new SelectList(_context.Wines, "ID", "Name");
+        ViewData["RateListID"] = new SelectList(_context.RateList, "ID", "Price");//this is for ratelist dropdown
+        ViewData["WineID"] = new SelectList(_context.Wines, "ID", "Name");//this is for wine dropdown
             return Page();
         }
 
@@ -36,7 +36,7 @@ namespace WineShop.Pages.Customer
                 return Page();
             }
 
-            _context.Customer.Add(Customer);
+            _context.Customer.Add(Customer);//adding customer
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
